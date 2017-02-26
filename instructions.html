@@ -60,24 +60,58 @@
         <b>A)</b> You can install <a href="http://continuum.io/downloads">Anaconda</a> by doing the following:
         <ol>
             <li>
-                 Download the installer that matches your operating system and follow the instructions.
+                 Download the installer that matches your operating system and follow the instructions in the screen.
                  You can choose between the <i>Graphical Installer</i> or the <i>Command Line Installer</i>.
             </li>
             <li>
                 You are now ready to use Python. 
-                To test your installation open a terminal and run <pre>ipython</pre> 
+                To test your installation open a terminal and run
+                <pre>ipython</pre> 
                 You should see an interactive window that says you are using the Anaconda Python distribution.
-                You can open a new notebook by typing <pre>jupyter notebook</pre>
-                Start programming!       
-
+                You can exit by typing
+                <pre>quit()</pre>    
+            </li>
+            <li>
+                To view the notebooks of the tutorial series, first download the zip or tar file
+                from the main page and extract it.
+            </li>
+            <li>
+                Then via a new terminal navigate to the folder you have downloaded the file.
+                Type
+                <pre>jupyter notebook</pre>
+                and you will be able to see the notebooks for each session.
+            </li>
         </ol>
         </p>
+
         <p><b>B)</b> Alternatively, you can install a <i>light</i> version of Anaconda: <a href="https://conda.io/miniconda.html">Miniconda</a>.
         <br/>
-        First download the installer depending on your operating system from  <a href="https://conda.io/miniconda.html">here</a>.
-        Then open a terminal and type the following:
-        <pre>conda install numpy scipy matplotlib jupyter</pre>
-        This will install only the libraries necessary for this tutorial.
+        <ol>
+            <li>
+                First download the installer depending on your operating system from 
+                <a href="https://conda.io/miniconda.html">here</a>.
+            </li>
+            <li>
+                Depending on your operating system run the installation file.
+                In Windows run the .exe file you downloaded and in Mac/Linux run in a terminal
+                <pre>cd Downloads</pre><pre>bash Miniconda3-latest-MacOSX-x86_64</pre>
+                provided you downloaded the <i>Miniconda3-latest-MacOSX-x86_64</i> installer in the <i>Downloads</i> folder.
+            </li>
+            <li>
+                To install the packages we are going to use in the tutorials, type in terminal
+                <pre>conda install numpy scipy matplotlib jupyter memory_profiler</pre>
+            </li>
+            <li>
+                To view the notebooks of the tutorial series, first download the zip or tar file
+                from the main page and extract it.
+            </li>
+            <li>
+                Then via a new terminal navigate to the folder you have downloaded the file.
+                Type:
+                <pre>jupyter notebook</pre>
+                and you will be able to see the notebooks for each session.
+            </li>
+        </ol>
         </p>
 
         For any questions about the installation go to
