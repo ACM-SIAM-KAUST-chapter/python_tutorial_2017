@@ -48,7 +48,7 @@ div.text_cell_render{
     line-height: 130%;
     font-size: 125%;
     width:1100px;
-    margin-left: auto;
+    margin-left: 0em;
     margin-right: auto;
 }
 
