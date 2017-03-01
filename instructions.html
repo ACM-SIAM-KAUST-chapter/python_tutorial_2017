@@ -18,12 +18,13 @@
     <div class="wrapper">
 
     <header>
-        <h1><a href="http://acm-siam-kaust-chapter.github.io/python_tutorial_2017/">Python Tutorial</a></h1>
+        <h1><a href="http://acm-siam-kaust-chapter.github.io/python_tutorial_2017">
+        Python Tutorial</a></h1>
         <h2> ACM/SIAM Student Chapter <br/> KAUST | 2017</h2>
         <ul>
             <li><a href="https://github.com/ACM-SIAM-KAUST-chapter/python_tutorial_2017/zipball/master">Download <strong>ZIP File</strong></a></li>
             <li><a href="https://github.com/ACM-SIAM-KAUST-chapter/python_tutorial_2017/tarball/master">Download <strong>TAR Ball</strong></a></li>
-            <li><a href="https://github.com/ACM-SIAM-KAUST-chapter/python_tutorial_2017">View On <strong>GitHub</strong></a></li>
+            <li><a href="https://github.com/ACM-SIAM-KAUST-chapter/python_tutorial_2017" target="_blank">View On <strong>GitHub</strong></a></li>
         </ul>
         <table style="clear: both;">
             <tr><td><strong>Venue:</strong></td>
@@ -40,95 +41,124 @@
                 <td colspan=2><br /></td>
             </tr>
             <tr><td colspan=2 class="register"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeeyQXcomElLS6H7kvi8QcqUdTh2m3ccBDA2AA_-1LF8u62Xg/viewform" target="_blank" class="red">Registration</a></td>
-            <tr><td colspan=2 class="register"><a href="instructions.html" target="_blank" class="red">How to install Python</a></td>
+            <tr><td colspan=2 class="register"><a href="instructions.html" class="red">How to install Python</a></td>
             </tr>
         </table>
         <table style="text-align: left">
-            <tr><td><a href="https://www.acm.org/" target="_blank"><img class="org-logo" src="images/acmchapterlogo.png" ></a></tr></td>
-            <tr><td><a href="https://www.siam.org/" target="_blank"><img class="org-logo" src="images/siamchapterlogo.png"></a></tr></td>
+            <tr><td><a href="https://www.acm.org" target="_blank"><img class="org-logo" src="images/acmchapterlogo.png" ></a></tr></td>
+            <tr><td><a href="https://www.siam.org" target="_blank"><img class="org-logo" src="images/siamchapterlogo.png"></a></tr></td>
         </table>
     </header>
 
     <section>
         <h2><div name="Installation" class="anchor" id="setup_instructions"><span class="octicon octicon-link">Setup instructions</span></div></h2>
         We recommend you install the all-in-one scientific Python distribution from 
-        <a href="http://continuum.io/downloads">Continuum Analytics (Anaconda)</a>. 
-        However, you can install all the necessary packages and their dependencies on your own using 
-        <a href="http://www.pip-installer.org">pip</a> or 
-        <a href="http://pythonhosted.org/setuptools/easy_install.html">easy_install</a> installers.
-        <p></p>
+        <a href="http://continuum.io/downloads" target="_blank">
+        Continuum Analytics (Anaconda)</a>. 
+        However, if you already have a Python distribution you can install all the necessary
+        packages and their dependencies by using 
+        <a href="http://www.pip-installer.org" target="_blank">pip</a> or 
+        <a href="http://setuptools.readthedocs.io/en/latest/easy_install.html" target="_blank">
+        easy_install</a> installers.
+        <br/><br/>
+        In this series of tutorials we use the following packages:
+        <br/>
+        <a href="http://www.numpy.org" target="_blank">NumPy</a>,
+        <a href="http://www.scipy.org" target="_blank">SciPy</a>,
+        <a href="http://matplotlib.org" target="_blank">Matplotlib</a>,
+        <a href="http://stanford.edu/~mwaskom/software/seaborn" target="_blank">Seaborn</a>,
+        <a href="http://scikit-learn.org/stable" target="_blank">Scikit-Learn</a>, and
+        <a href="https://pypi.python.org/pypi/memory_profiler" target="_blank">memory_profiler</a>.
+        <br/>
+        You will also need to access <i>jupyter notebooks</i> so in addition you need the
+        <a href="http://jupyter.org" target="_blank">Jupiter</a> package.
+
+        <p><br/></p>
+        <p><b>Python Installation:</b></p>
         <p>
-        <b>A)</b> You can install <a href="http://continuum.io/downloads">Anaconda</a> by doing the following:
+        <b>A)</b> You can install <a href="http://continuum.io/downloads" target="_blank">
+        Anaconda</a> by doing the following:
         <ol>
             <li>
-                 Download the installer that matches your operating system and follow the instructions in the screen.
-                 You can choose between the <i>Graphical Installer</i> or the <i>Command Line Installer</i>.
+                Download the installer that matches your operating system and follow the
+                instructions in the screen.
+                You can choose between the <i>Graphical Installer</i> or the
+                <i>Command Line Installer</i>.
             </li>
             <li>
                 You are now ready to use Python. 
                 To test your installation open a terminal and run
                 <pre>ipython</pre> 
-                You should see an interactive window that says you are using the Anaconda Python distribution.
+                You should see an interactive window that says you are using the Anaconda Python
+                distribution.
                 You can exit by typing
                 <pre>quit()</pre>    
             </li>
             <li>
-                To view the notebooks of the tutorial series, first download the zip or tar file
-                from the main page and extract it.
-            </li>
-            <li>
-                Then via a new terminal navigate to the folder you have downloaded the file.
-                Type
-                <pre>jupyter notebook</pre>
-                and you will be able to see the notebooks for each session.
-            </li>
+                In addition with the 250 packages that automatically come with the Anaconda
+                distribution we are going to use in Session 4 the package
+                <a href="http://scikit-learn.org/stable" target="_blank">Scikit-Learn</a>.
+                You can install it by running in a terminal
+                <pre>conda install scikit-learn</pre>
         </ol>
         </p>
 
-        <p><b>B)</b> Alternatively, you can install a <i>light</i> version of Anaconda: <a href="https://conda.io/miniconda.html">Miniconda</a>.
+        <p><b>B)</b> Alternatively, you can install a <i>light</i> version of Anaconda:
+        <a href="https://conda.io/miniconda.html" target="_blank">Miniconda</a>.
         <br/>
         <ol>
             <li>
                 First download the installer depending on your operating system from 
-                <a href="https://conda.io/miniconda.html">here</a>.
+                <a href="https://conda.io/miniconda.html" target="_blank">here</a>.
             </li>
             <li>
                 Depending on your operating system run the installation file.
                 In Windows run the .exe file you downloaded and in Mac/Linux run in a terminal
                 <pre>cd Downloads</pre><pre>bash Miniconda3-latest-MacOSX-x86_64.sh</pre>
-                provided you downloaded the <i>Miniconda3-latest-MacOSX-x86_64</i> installer in the <i>Downloads</i> folder.
+                provided you downloaded the <i>Miniconda3-latest-MacOSX-x86_64</i> installer in
+                the <i>Downloads</i> folder.
             </li>
             <li>
                 To install the packages we are going to use in the tutorials, type in terminal
-                <pre>conda install numpy scipy matplotlib jupyter memory_profiler seaborn</pre>
-            </li>
-            <li>
-                To view the notebooks of the tutorial series, first download the zip or tar file
-                from the main page and extract it.
-            </li>
-            <li>
-                Then via a new terminal navigate to the folder you have downloaded the file.
-                Type:
-                <pre>jupyter notebook</pre>
-                and you will be able to see the notebooks for each session.
+                <pre>conda install numpy scipy matplotlib jupyter memory_profiler seaborn scikit-learn</pre>
             </li>
         </ol>
         </p>
+        <br/>
+        
+        To view the notebooks of the tutorial series, first download the zip or tar file from the
+        main page and extract it.
+        <br/>
+        Then via a new terminal navigate to the folder you have downloaded the file.
+        Type:
+        <pre>jupyter notebook</pre>
+        and you will be able to see the notebooks for each session.
+        <br/><br/>
+        
+        For the last session we are going to use the
+        <a href="http://mpi4py.readthedocs.io/en/stable" target="_blank">mpi4py</a> package.
+        To install it run in a terminal
+        <pre>conda install -c conda-forge mpi4py</pre>
+        You can test if the installation works by typing
+        <pre>mpiexec -n 4 python -m mpi4py ringtest</pre>
+        <br/>
 
         For any questions about the installation go to
-        <a href="http://docs.continuum.io/anaconda/index.html">Anaconda documentation</a> or email us at
-        <a href="mailto:acm.chapter@kaust.edu.sa"> acm.chapter@kaust.edu.sa </a>.
+        <a href="http://docs.continuum.io/anaconda/index.html" target="_blank">
+        Anaconda documentation</a> or email us at
+        <a href="mailto:yiannis.hadjimichael@kaust.edu.sa">yiannis.hadjimichael@kaust.edu.sa</a>.
  
         <div align="right"><a href="index.html">[back to main page]</a></div>
         <hr style="margin-top: 500px;"/>
 
     </section>
 
-
     <footer>
-        <p>This project is maintained by <br/> <a href="https://github.com/hadjimy"> Yiannis Hadjimichael </a></p>
-        <p><small>Hosted on GitHub Pages </br> Theme by <a href="https://github.com/orderedlist">orderedlist</a> and <br>
-        customized by <a href="https://github.com/hadjimy">hadjimy</a></small></p>
+        <p>This project is maintained by <br/>
+        <a href="https://github.com/hadjimy" target="_blank">Yiannis Hadjimichael</a></p>
+        <p><small>Hosted on GitHub Pages</br>Theme by
+        <a href="https://github.com/orderedlist" target="_blank">orderedlist</a> and <br>
+        customized by <a href="https://github.com/hadjimy" target="_blank">hadjimy</a></small></p>
     </footer>
 
     </div>
