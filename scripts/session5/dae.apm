@@ -1,0 +1,27 @@
+Model
+
+  Parameters
+    p
+    t >=298 <=398
+  End Parameters
+
+  Variables
+    x1 = 1
+    x2 = 0
+  End Variables
+
+  Intermediates
+    k1 = 4000 * exp(-2500/t)
+    k2 = 6.2e5 * exp(-5000/t)
+  End Intermediates
+
+  Equations
+    maximize p * x2
+
+    $x1 = -k1 * x1^2
+    $x2 = k1*x1^2 - k2*x2
+
+    ! note: the $ denotes time differential
+  End Equations
+
+End Model
