@@ -1,0 +1,69 @@
+\begin{frame}[fragile]
+  \frametitle{Hello World! -- C implementation}
+  \begin{block}{C header}
+    \footnotesize
+    \inputminted[linenos]{c}{wrap/helloworld.h}
+  \end{block}
+  \begin{block}{C source}
+    \footnotesize
+    \inputminted[linenos]{c}{wrap/helloworld.c}
+  \end{block}
+\end{frame}
+    
+\begin{frame}[fragile]
+  \frametitle{Hello World! -- Wrapping with \textbf{Cython}}
+  \begin{block}{Cython source}
+    \footnotesize
+    \inputminted[linenos]{cython}{wrap/helloworld.pyx}
+  \end{block}
+  \begin{block}{At the Python prompt \ldots}
+    \footnotesize
+\begin{verbatim}
+>>> from mpi4py import MPI
+>>> import helloworld
+>>> helloworld.sayhello(MPI.COMM_WORLD)
+Hello, World! I am process 0 of 1 on localhost.
+\end{verbatim}
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Hello World! -- Wrapping with \textbf{SWIG}}
+  \begin{block}{SWIG interface file}
+    \footnotesize
+    \inputminted[linenos]{c}{wrap/helloworld.i}
+  \end{block}
+  \begin{block}{At the Python prompt \ldots}
+    \footnotesize
+\begin{verbatim}
+>>> from mpi4py import MPI
+>>> import helloworld
+>>> helloworld.sayhello(MPI.COMM_WORLD)
+Hello, World! I am process 0 of 1 on localhost.
+\end{verbatim}
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Hello World! -- Wrapping with \textbf{F2Py}}
+  \begin{block}{Fortran 90 source}
+    \footnotesize
+    \inputminted[linenos]{fortran}{wrap/helloworld.f90}
+  \end{block}
+  \begin{block}{At the Python prompt \ldots}
+    \footnotesize
+\begin{verbatim}
+>>> from mpi4py import MPI
+>>> import helloworld
+>>> fcomm = MPI.COMM_WORLD.py2f()
+>>> helloworld.sayhello(fcomm)
+Hello, World! I am process 0 of 1 on localhost.
+\end{verbatim}
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Hello World! -- Wrapping with \textbf{Boost.Python}}
+  \footnotesize
+  \inputminted[linenos]{cpp}{wrap/helloworld.cxx}
+\end{frame}

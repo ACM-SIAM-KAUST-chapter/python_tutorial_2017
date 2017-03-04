@@ -1,0 +1,52 @@
+\begin{frame}
+  \frametitle{Dynamic Process Management}
+  \begin{itemize}
+  \item Useful in assembling complex distributed applications. Can
+    couple \textbf{independent parallel codes} written in
+    \textbf{different languages}.
+  \item Create new processes from a running program.\\
+    -- \texttt{Comm.Spawn()} and \texttt{Comm.Get\_parent()}
+  \item Connect two running applications together.\\
+    -- \texttt{Comm.Connect()} and \texttt{Comm.Accept()}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Dynamic Process Management -- Spawning} Spawning new
+  processes is a \emph{collective operation} that creates an
+  \textbf{intercommunicator}.
+  \begin{itemize}
+  \item Local group is group of spawning processes (parent).
+  \item Remote group is group of new processes (child).
+  \item \texttt{Comm.Spawn()} lets parent processes spawn child
+    processes. It returns a new intercommunicator.
+  \item \texttt{Comm.Get\_parent()} lets child processes get the
+    intercommunicator to the parent group. Child processes have their
+    own \texttt{COMM\_WORLD}.
+  \item \texttt{Comm.Disconnect()} ends the parent--child
+    connection. Both groups can continue execution.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Dynamic Process Management -- Compute Pi (parent)}
+  \small\inputminted[linenos]{python}{compute_pi-parent.py}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Dynamic Process Management -- Compute Pi (child)}
+  \small\inputminted[linenos]{python}{compute_pi-child.py}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exercise \#6}
+  \begin{enumerate}[a)]
+  \item Implement the \emph{Compute Pi} \textbf{child} code in
+    \textbf{C} or \textbf{\Cpp}. Adjust the parent code in Python to
+    spawn the new implementation.
+  \item Compute and plot the \emph{Mandelbrot Set} using spawning with
+    parent/child codes implemented in Python.\\
+    \textbf{Tip}: Reuse the provided parent code in Python and
+    translate the child code in Fortran 90 to Python.
+  \end{enumerate}
+\end{frame}

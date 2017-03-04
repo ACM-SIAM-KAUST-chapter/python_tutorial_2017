@@ -10,7 +10,7 @@ The tutorials instructional material is available under [Creative Commons Attrib
 
 for any purpose, even commercially, under the following conditions:
 
-- **Attribution** - You must attribute the work using "Copyright (c) ACM Student Chapter, KAUST" (but not in any way that suggests that we endorse you or your use of the work).
+- **Attribution** - You must attribute the work using "Copyright (c) ACM/SIAM Student Chapter, KAUST" (but not in any way that suggests that we endorse you or your use of the work).
 
 With the understanding that:
 
@@ -29,7 +29,7 @@ For the full legal text of this license, please see [http://creativecommons.org/
 
 Our software is available under the MIT License (MIT)
 
-Copyright (c) 2014 Maruan Al-Shedivat.
+Copyright (c) 2017 Yiannis Hadjimichael.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in

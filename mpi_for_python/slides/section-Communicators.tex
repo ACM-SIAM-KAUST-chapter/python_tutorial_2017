@@ -1,0 +1,58 @@
+\begin{frame}
+  \frametitle{Communicators}
+  \fbox{communicator = process group + communication context}
+  \linebreak
+  \begin{itemize}
+  \item Predefined instances
+    \begin{itemize}
+    \item \texttt{COMM\_WORLD}
+    \item \texttt{COMM\_SELF}
+    \end{itemize}
+  \item Accessors
+    \begin{itemize}
+    \item \texttt{rank = comm.Get\_rank() \# or comm.rank}
+    \item \texttt{size = comm.Get\_size() \# or comm.size}
+    \item \texttt{group = comm.Get\_group()}
+    \end{itemize}
+  \item Constructors\\
+    \begin{itemize}
+    \item \texttt{newcomm = comm.Dup()}
+    \item \texttt{newcomm = comm.Create(group)}
+    \item \texttt{newcomm = comm.Split(color, key)}
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Communicators -- \texttt{Dup()}}
+  \inputminted[linenos]{python}{comm_dup.py}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Communicators -- \texttt{Create()}}
+  \inputminted[linenos]{python}{comm_create.py}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Communicators -- \texttt{Split()}}
+  \inputminted[linenos]{python}{comm_split.py}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exercise \#1}
+  \begin{enumerate}[a)]
+  \item Create a new process group containing the processes in the
+    group of \texttt{COMM\_WORLD} with \textbf{even} rank. Use the new
+    group to create a new communicator.\\
+    \textbf{Tip}: use \texttt{Group.Incl()} or \texttt{Group.Range\_incl()}
+  \item Use \texttt{Comm.Split()} to split \texttt{COMM\_WORLD} in two halves.
+    \begin{itemize}
+    \item The first half contains the processes with \textbf{even} rank
+      in \texttt{COMM\_WORLD}. The process rank ordering in the new
+      communicator is \textbf{ascending}.
+    \item The second half contains the processes with \textbf{odd} rank
+      in \texttt{COMM\_WORLD}. The process rank ordering in the new
+      communicator is \textbf{descending}.
+  \end{itemize}
+  \end{enumerate}
+\end{frame}

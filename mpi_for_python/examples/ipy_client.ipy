@@ -1,0 +1,5 @@
+#!/usr/bin/env ipython
+from ipyparallel import Client
+rc = Client()
+%px from mpi4py import MPI
+%px print(MPI.Get_processor_name())

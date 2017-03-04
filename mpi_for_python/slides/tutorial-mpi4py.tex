@@ -1,0 +1,115 @@
+\documentclass{beamer}
+%\usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\usepackage{minted}
+\usepackage{fancyvrb}
+\usepackage{xspace}
+\newcommand{\myurl}[1]{\href{#1}{\texttt{#1}}}
+\newcommand{\email}[1]{\href{mailto:#1}{\texttt{#1}}}
+
+\title[mpi4py]{MPI for Python}
+\subtitle{\myurl{http://mpi4py.scipy.org}}
+\author[L.~Dalcin]{Lisandro~Dalcin~\\\email{dalcinl@gmail.com}}
+\institute[]
+{
+  Extreme Computing Research Center \\
+  King Abdullah University of Science and Technology\\
+  Thuwal, Saudi Arabia
+%  Centro de Investigación de Métodos Computacionales \\
+%  Consejo Nacional de Investigaciones Científicas y Técnicas\\
+%  Santa Fe, Argentina
+}
+\date[]
+{
+  \today
+}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\newcommand{\Cpp}{C\protect\raisebox{.18ex}{++}\xspace}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\section*{Outline}
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents
+\end{frame}
+
+
+% --- Overview ---
+\section{Overview}
+\input{section-Overview.tex}
+
+
+% --- Hello World! ---
+\section{Hello World!}
+\input{section-HelloWorld.tex}
+
+
+% % --- Communicators ---
+% \section{Communicators}
+% \input{section-Communicators.tex}
+
+
+% --- Point to Point ---
+\section{Point to Point Communication}
+\input{section-PointToPoint.tex}
+
+
+% --- Collectives ---
+\section{Collective Operations}
+\input{section-Collectives.tex}
+
+
+% --- Compute Pi ---
+\section{Compute Pi}
+\input{section-ComputePi.tex}
+
+
+% --- Mandelbrot ---
+\section{Mandelbrot Set}
+\input{section-Mandelbrot.tex}
+
+
+% --- DynProc ---
+\section{Dynamic Process Management}
+\input{section-DynProc.tex}
+
+% % --- Wrapping ---
+% \section{Wrapping C/\Cpp/Fortran}
+% \input{section-Wrapping.tex}
+
+
+% --- Closing ---
+\section*{Closing}
+
+\begin{frame}
+  \Large
+  Do not hesitate to ask for help \ldots
+  \begin{itemize}
+  \item Mailing List: \url{mpi4py@googlegroups.com}
+  \item Mail\&Chat:   \url{dalcinl@gmail.com}
+  \end{itemize}
+  \bigskip
+  \begin{centering}
+   \Huge Thanks!\par
+  \end{centering}
+\end{frame}
+
+\end{document}
+
+
+% Local Variables:
+% mode: latex
+% TeX-PDF-mode: t
+% End:

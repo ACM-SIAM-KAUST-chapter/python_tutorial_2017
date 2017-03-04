@@ -1,0 +1,71 @@
+\begin{frame}[fragile]
+  \begin{itemize}
+  \item Blocking communication
+    \begin{itemize}
+    \item Python objects
+      {\footnotesize
+\begin{verbatim}
+comm.send(obj, dest=0, tag=0)
+obj = comm.recv(None, src=0, tag=0)
+\end{verbatim}
+      }
+    \item Array data
+      {\footnotesize
+\begin{verbatim}
+comm.Send([array, count, datatype], dest=0, tag=0)
+comm.Recv([array, count, datatype], src=0, tag=0)
+\end{verbatim}
+      }
+    \end{itemize}
+  \item Nonblocking communication
+    \begin{itemize}
+    \item Python objects
+      {\footnotesize
+\begin{verbatim}
+request = comm.isend(object, dest=0, tag=0)}
+request.wait()
+\end{verbatim}
+      }
+    \item Array data
+      {\footnotesize
+\begin{verbatim}
+req1 = comm.Isend([array, count, datatype], dest=0, tag=0)
+req2 = comm.Irecv([array, count, datatype], src=0, tag=0)
+MPI.Request.Waitall([req1, req2])}
+\end{verbatim}
+      }
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{PingPong}
+  \inputminted[linenos]{python}{p2p_pingpong.py}
+\end{frame}
+
+\begin{frame}
+  \frametitle{PingPing}
+  \inputminted[linenos]{python}{p2p_pingping.py}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exchange}
+  \inputminted[linenos]{python}{p2p_exchange.py}
+\end{frame}
+
+\begin{frame}
+  \frametitle{PingPing with NumPy arrays}
+  \inputminted[linenos]{python}{p2p_pingping-numpy.py}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exercise \#2}
+  \begin{enumerate}[a)]
+  \item Modify the \emph{PingPong} example to communicate NumPy arrays.\\
+    \textbf{Tip}: use \texttt{Comm.Send()} and \texttt{Comm.Recv()}
+  \item Modify the \emph{Exchange} example to communicate NumPy arrays.\\
+    Use nonblocking communication for both sending and receiving.\\
+    \textbf{Tip}: use \texttt{Comm.Isend()} and \texttt{Comm.Irecv()}
+  \end{enumerate}
+\end{frame}
+

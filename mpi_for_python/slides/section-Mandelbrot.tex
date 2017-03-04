@@ -1,0 +1,73 @@
+\begin{frame}
+  \frametitle{Mandelbrot Set}
+  \includegraphics[scale=0.5]{mandelbrot.pdf}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Mandelbrot Set -- sequential [1]}
+  \inputminted[linenos,firstline=1,lastline=13]{python}
+  {mandelbrot-seq.py}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Mandelbrot Set -- sequential [2]}
+  \inputminted[linenos,firstline=15]{python}
+  {mandelbrot-seq.py}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Mandelbrot Set -- partitioning}
+  \begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[scale=0.25]{mandelbrot.pdf}
+  \end{minipage}
+  \begin{columns}[t]
+    \begin{column}{0.45\textwidth}
+      \centering
+      \includegraphics[scale=0.5]{dist-block.pdf}\\
+      Block distribution
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \centering
+      \includegraphics[scale=0.5]{dist-cyclic.pdf}\\
+      Cyclic distribution
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Mandelbrot Set -- parallel, block [1]}
+  \inputminted[linenos,firstline=1,lastline=13]{python}
+  {mandelbrot-mpi-block.py}
+\end{frame}
+\begin{frame}[t]
+  \frametitle{Mandelbrot Set -- parallel, block [2]}
+  \inputminted[linenos,firstline=15,lastline=29]{python}
+  {mandelbrot-mpi-block.py}
+\end{frame}
+\begin{frame}[t]
+  \frametitle{Mandelbrot Set -- parallel, block [3]}
+  \inputminted[linenos,firstline=31,lastline=39]{python}
+  {mandelbrot-mpi-block.py}
+\end{frame}
+\begin{frame}[t]
+  \frametitle{Mandelbrot Set -- parallel, block [4]}
+  \inputminted[linenos,firstline=41,lastline=55]{python}
+  {mandelbrot-mpi-block.py}
+\end{frame}
+\begin{frame}[t]
+  \frametitle{Mandelbrot Set -- parallel, block [5]}
+  \inputminted[linenos,firstline=57,lastline=62]{python}
+  {mandelbrot-mpi-block.py}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exercise \#5}%
+  Measure the wall clock time $T_i$ of local computations at each
+  process for the \emph{Mandelbrot Set} example with \textbf{block} and
+  \textbf{cyclic} row distributions.\\
+  What is the best row distribution regarding load balancing?\\
+  \smallskip\smallskip
+  \textbf{Tip}: use \texttt{Wtime()} to measure wall time, compute
+  the ratio $T_\text{max}/T_\text{min}$ to compare load balancing.
+\end{frame}

@@ -1,0 +1,34 @@
+\begin{frame}
+  \frametitle{Compute Pi}
+  \Large
+  \begin{equation*}
+    \pi =
+    \int_0^1 \frac{4}{1+x^2} dx \approx
+    \frac{1}{n}\sum_{i=0}^{n-1}\frac{4}{1+(\frac{i+0.5}{n})^2}
+  \end{equation*}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Compute Pi -- sequential}
+  \inputminted[linenos]{python}{compute_pi-seq.py}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Compute Pi -- parallel [1]}
+  \inputminted[linenos,firstline=1,lastline=14]{python}
+  {compute_pi-mpi.py}
+\end{frame}
+
+\begin{frame}[t]
+  \frametitle{Compute Pi -- parallel [2]}
+  \inputminted[linenos,firstline=16]{python}
+  {compute_pi-mpi.py}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Exercise \#4}
+  Modify \emph{Compute Pi} example to employ NumPy.\\
+  \smallskip\smallskip
+  \textbf{Tip}: you can convert a Python \texttt{int}/\texttt{float}
+  object to a NumPy \emph{scalar} with \texttt{x~=~numpy.array(x)}.
+\end{frame}

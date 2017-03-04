@@ -1,0 +1,13 @@
+# hack to build '.tex' files with 'pdflatex'
+from SCons.Action import Action
+PDFLaTeXAction = Action('$PDFLATEXCOM')
+env = Environment()
+env['PDFLATEXFLAGS'] = '-shell-escape'
+env['BUILDERS']['PDF'].add_action('.tex',PDFLaTeXAction)
+
+
+pdf = env.PDF('tutorial-mpi4py.tex')
+
+# Local Variables:
+# mode: Python
+# End:
